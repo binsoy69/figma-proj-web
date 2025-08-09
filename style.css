@@ -5,3 +5,38 @@
   --sky-blue-color: #e8f7fb;
   --purple-color: #6f7dfb;
 }
+
+*,
+*::after *::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Buttons */
+
+.btn {
+  padding: 16px 32px;
+  border-radius: 24px;
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  position: relative;
+}
+
+.btn.dark {
+  background: var(--dark-blue-color);
+}
+
+.btn.light {
+  background: var(--orange-color);
+}
+
+.btn.icon-edit::before {
+  content: url("assets/icon-edit.svg");
+}
