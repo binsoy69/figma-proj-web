@@ -16,6 +16,12 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.wrapper {
+  max-width: 1134px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
 /* Buttons */
 
 .btn {
@@ -24,7 +30,7 @@ body {
   color: #fff;
   display: inline-block;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
   text-decoration: none;
   position: relative;
 }
@@ -39,4 +45,277 @@ body {
 
 .btn.icon-edit::before {
   content: url("assets/icon-edit.svg");
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  transform: translateY(-50%);
+}
+
+.btn.icon-edit {
+  padding-left: 60px;
+}
+
+/* Header */
+
+header {
+  background: linear-gradient(180deg, #6f7dfb 0%, #26308c 100%);
+  height: 100vh;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 1134px;
+  top: 36px;
+  z-index: 100;
+}
+
+nav .logo {
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  list-style: none;
+  margin: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Hero Section */
+
+.hero-section {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 60px;
+}
+
+.hero-section .left h1 {
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 125%; /* 62.5px */
+  margin-bottom: 0;
+}
+
+.hero-section .left p {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 200%; /* 32px */
+  margin-bottom: 30px;
+  width: 457px;
+}
+
+.hero-section .left {
+  flex: 1;
+}
+
+.hero-section .right {
+  position: relative;
+  left: 7%;
+}
+
+.hero-section .right img {
+  height: 520px;
+  vertical-align: middle;
+}
+
+/* Achievement Cards */
+
+.achievement-card {
+  position: absolute;
+  min-width: 200px;
+}
+
+.achievement-card .content {
+  border-radius: 24px;
+  background: #fff;
+  padding: 8px 32px;
+  z-index: 10;
+  position: relative;
+}
+
+.achievement-card.students-enrolled {
+  left: 47%;
+  top: 269px;
+}
+
+.achievement-card.overall-rating {
+  left: 45%;
+  top: 453px;
+}
+
+.achievement-card .content div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.achievement-card h3 {
+  color: var(--dark-blue-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.achievement-card p {
+  color: var(--dark-blue-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: -8px;
+  margin-bottom: 8px;
+}
+
+.achievement-card .bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 24px;
+  background: linear-gradient(180deg, #6f7dfb 0%, #3b448f 100%);
+  top: 8px;
+  left: 8px;
+  z-index: 1;
+}
+
+/* Testimonials Section */
+
+section {
+  margin-top: 100px;
+}
+
+h2 {
+  color: var(--dark-blue-color);
+  font-family: "Raleway", sans-serif;
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 120%;
+}
+
+h2.light {
+  color: #fff;
+}
+
+section p {
+  color: var(--dark-blue-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 200%;
+  margin: 12px 0;
+}
+
+.testimonials-section {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+}
+
+.testimonials-section .mobile-btn {
+  display: none;
+}
+
+.testimonials-section .testimonial-card {
+  width: 442px;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 9px 36px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.testimonials-section .testimonial-card::before {
+  content: "";
+  width: 28px;
+  height: 40px;
+  position: absolute;
+  top: -40px;
+  left: 60px;
+  background: var(--dark-blue-color);
+  border-radius: 24px 24px 0 0;
+}
+
+.testimonials-section .testimonial-card:last-child::before {
+  left: 40px;
+  top: -50px;
+  border-radius: 0 0 24px 24px;
+  height: calc(100% + 90px);
+  z-index: -1;
+}
+
+.testimonials-section .testimonial-card .content {
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 150%;
+  border-radius: 24px;
+  padding: 24px 32px;
+  background-color: var(--purple-color);
+}
+
+.testimonials-section .testimonial-card:last-child .content {
+  background: var(--orange-color);
+}
+
+.testimonials-section .testimonial-card .info h4 {
+  color: var(--dark-blue-color);
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 120%;
+  margin: 0;
+}
+
+.testimonials-section .testimonial-card .info {
+  padding: 24px 32px;
+  background: #fff;
+  border-radius: 24px;
+}
+
+.testimonials-section .testimonial-card .info p.company {
+  color: var(--dark-blue-color);
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.testimonials-section .testimonial-card img {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  right: 32px;
+  bottom: 20px;
+}
+
+.testimonials-section .testimonial-card:last-child {
+  transform: translateX(20px);
+}
+
+.testimonials-section .features {
+  margin-bottom: 30px;
 }
